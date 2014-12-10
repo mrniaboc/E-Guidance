@@ -17,7 +17,6 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'bootstrap_form'
 
-gem 'country_select'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,6 +42,7 @@ gem "will_paginate"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rails_12factor', group: [:production]
 gem 'pry', group: [:development, :test]
 # Use debugger
 # gem 'debugger', group: [:development, :test]
