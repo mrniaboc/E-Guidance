@@ -1,0 +1,12 @@
+
+<ul class='list-group'>
+
+  <% @professionals.each do |prof| %>
+
+    <li class='list-group-item'><%=link_to("#{prof.first_name} #{prof.last_name}", prof) %> <span class='badge push-right'><%=prof.subject_area %></span> </li>
+
+  <%end%>
+
+  <li class='list-group-item'><%=link_to("new", new_professional_path)%></li>
+</ul>
+<%= will_paginate @professionals %>

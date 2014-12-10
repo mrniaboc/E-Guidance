@@ -1,0 +1,50 @@
+<%= form_for @professional do |p| %>
+  <%= p.label :first_name %>:
+  <%= p.text_field :first_name %><br />
+
+  <%= p.label :last_name %>:
+  <%= p.text_field :last_name %><br />
+
+  <%= p.label :degree_subject %>:
+  <%= p.text_field :degree_subject %><br />
+
+  <%= p.label  :degree_level %>:
+  <%= p.select :degree_level, options_for_select([["bacholers","bacholers"], ["masters","masters"] , ["phd","phd"]])%> <br />
+
+  <%= p.label :age %>:
+  <%= p.number_field :age%><br />
+
+  <%= p.label :first_language %>:
+  <%= p.select "first_language", options_from_collection_for_select(LanguageList::COMMON_LANGUAGES, "iso_639_1", "name") %><br />
+
+  <%= p.label :skills %> (comma seperated):
+  <%= p.text_field :skills %><br />
+
+
+  <%= p.label :gender %>:
+  <%= p.select :gender, options_for_select(gender_list)%><br />
+
+  <%= p.label :place_of_origin %>:
+  <%= country_select(:professional, :place_of_origin)%><br />
+
+  <%= p.label :hobbies%>(comma seperated):
+  <%= p.text_field :hobbies %><br />
+
+  <%= p.label :university%>:
+  <%= p.text_field :university %><br />
+
+  <%= p.label :ethnicity%>:
+  <%= p.text_field :ethnicity %><br />
+
+  <%= p.label :subject_area%>:
+  <%= p.select  :subject_area, options_for_select(subject_areas)%><br />
+
+  <%= p.label :profile_pic_url%>:
+  <%= p.url_field :profile_pic_url%><br />
+
+  <%= p.label :employer%>:
+  <%= p.text_field :employer%>
+
+
+<%= p.submit %>
+<% end %>

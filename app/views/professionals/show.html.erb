@@ -1,0 +1,24 @@
+<div class='panel'>
+  <div class='panel-heading'>
+    <%=image_tag(@professional.profile_pic_url, width: 150)%>
+    <%= @professional.first_name%>, <%= @professional.last_name %>
+  </div>
+  <div class='panel-body'>
+    <ul class='list-group'>
+
+      <li class='list-group-item'><span class='key'>Degree Subject </span><span class='badge push-right'><%= @professional.degree_subject%></span></li>
+      <li class='list-group-item'><span class='key'>Degree Level </span>  <span class='badge push-right'><%= @professional.degree_level%></span></li>
+      <li class='list-group-item'><span class='key'>Age </span>           <span class='badge push-right'><%= @professional.age %></span></li>
+      <li class='list-group-item'><span class='key'>First Language </span>  <span class='badge push-right'><%= @professional.first_language%></span></li>
+      <li class='list-group-item'><span class='key'>Skills" </span>  <span class='badge push-right'><%= @professional.skills.join(", ")%></span></li>
+      <li class='list-group-item'><span class='key'>Place Of Origin </span>  <span class='badge push-right'><%= @professional.place_of_origin%></span></li>
+      <li class='list-group-item'><span class='key'>Gender </span>  <span class='badge push-right'><%= @professional.gender%></span></li>
+      <li class='list-group-item'><span class='key'>Hobbies </span>  <span class='badge push-right'><%= @professional.hobbies.join(", ")%></span></li>
+      <li class='list-group-item'><span class='key'>University </span> <span class='badge push-right'> <%= @professional.university%></span></li>
+      <li class='list-group-item'><span class='key'>Ethnicity </span>  <span class='badge push-right'><%= @professional.ethnicity%></span></li>
+      <li class='list-group-item'><span class='key'>Subject Area </span> <span class='badge push-right'> <%= @professional.subject_area%></span></li>
+      <li class='list-group-item'><span class='key'>Employer </span>  <span class='badge push-right'><%= @professional.employer%></span></li>
+
+    </ul>
+  </div>
+</div>
